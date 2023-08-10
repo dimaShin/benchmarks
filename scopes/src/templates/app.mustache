@@ -1,0 +1,10 @@
+import React from 'react'
+import * as components from './components'
+
+
+export const App = () => {
+    console.log('rendering {{variant}}')
+    return (<>{Object.values(components).map((C, idx) => {
+        return Math.random() * 100 <= Number({{renderedPercentage}}) ? <C key={idx} /> : null
+    })}</>)
+}
